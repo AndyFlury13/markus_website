@@ -6,14 +6,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" href="scripts/style.css">
   <link rel="stylesheet" href="scripts/slideshow.css">
-  <script type="application/javascript" src="scripts/slideshow.js"></script>
+  <script type="text/x-javascript" src="scripts/vadose-scrape.js"></script>
   <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <body>
-  <div id = "background">
     <div id = "header">
-      <a href="" id = "title-link">Soil Physics <br>& Vadose Zone Hydrology</a>
+      <div class = "title-link">
+      <a href="index.html" class = "title-link">Soil Physics <br>& Vadose Zone Hydrology</a>
+    </div>
       <div id = "menu">
           <a href = "">Group</a>
           <a href="">Research
@@ -24,14 +25,15 @@
     </div>
 
     <div id = "main">
-      <div class="window">
+      <div class="slideshow">
         <span id="slide-1"></span>
         <span id="slide-2"></span>
         <span id="slide-3"></span>
         <span id="slide-4"></span>
         <span id="slide-5"></span>
+        <span id="slide-6"></span>
         <div class="image-container">
-          <div class = "grid-container">
+          <div class = "slideshow-grid">
             <div class = "grid-image1">
               <img src="assets/show1.jpg" class="slide">
             </div>
@@ -47,6 +49,9 @@
             <div class = "grid-image5">
               <img src="assets/show5.jpg" class="slide">
             </div>
+            <div class = "grid-image6">
+              <img src="assets/show6.jpg" class="slide">
+            </div>
           </div>
         </div>
         <div class="button-container">
@@ -55,13 +60,124 @@
           <a href="#slide-3" class="slider-button"></a>
           <a href="#slide-4" class="slider-button"></a>
           <a href="#slide-5" class="slider-button"></a>
+          <a href="#slide-6" class="slider-button"></a>
         </div>
       </div>
+
+      <div id = "bottom-half-grid">
+        <div id = "left-column">
+            <img src="assets/column.jpg" id = "column-image">
+            <div id = "welcome-text">
+              Welcome to the Soil Physics & Vadose Zone Hydrology lab at WSU
+              Puyallup! I am professor Markus Flury and I have studied and
+              taught soil physics for over INTEGER years. My main focus of
+              research is flow and transport in porous media, particularly in
+              the vadose zone. I have collaborated with over INTEGER scientists
+              in labs across the world, including China, Germany, Hungary, and
+              STRING.
+            </div>
+            <!-- </div> -->
+            <div id = "podcast">
+              <iframe width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/964019272&color=%23cd3040&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+              <div id = "soundcloud">
+                <a href="https://soundcloud.com/andrew-flury-495103738" title="Andrew Flury" target="_blank">Andrew Flury</a>
+                <a href="https://soundcloud.com/andrew-flury-495103738/markus-flury-on-the-plastic-shift" title="Markus Flury on The Plastic Shift" target="_blank">Markus Flury on The Plastic Shift</a>
+              </div>
+            </div>
+        </div>
+        <div id = "right-column">
+            <div id = "lab-news">
+              <div id = "lab-header">
+                <div id = "lab-title">
+                  Lab News
+                </div>
+              </div>
+              <div class = "entries">
+                <div class = "entry">
+                  <div class = "entry-text">
+                    Yingxue Yu has won an award for her poster presentation on the
+                    combustion of biodegradable plastic mulch!
+                  </div>
+                  <div class = "date">
+                      Jan. 4th, 2021
+                  </div>
+                </div>
+                <div class = "entry">
+                  <div class = "entry-text">
+                    Yingxue Yu is working on an R script to model soil sampling in
+                    the field
+                  </div>
+                  <div class = "date">
+                      Dec. 26th, 2020
+                  </div>
+                </div>
+                <div class = "entry">
+                  <div class = "entry-text">
+                    ASABE 2021 has been cancelled.
+                  </div>
+                  <div class = "date">
+                      Dec. 13th, 2020
+                  </div>
+                </div>
+                <div class = "entry">
+                  <div class = "entry-text">
+                    Yingxue Yu has won an award for her poster presentation on the
+                    combustion of biodegradable plastic mulch!
+                  </div>
+                  <div class = "date">
+                      Jan. 4th, 2021
+                  </div>
+                </div>
+                <div class = "entry">
+                  <div class = "entry-text">
+                    Yingxue Yu has won an award for her poster presentation on the
+                    combustion of biodegradable plastic mulch!
+                  </div>
+                  <div class = "date">
+                      Jan. 4th, 2021
+                  </div>
+                </div>
+                <div class = "entry">
+                  <div class = "entry-text">
+                    Yingxue Yu has won an award for her poster presentation on the
+                    combustion of biodegradable plastic mulch!
+                  </div>
+                  <div class = "date">
+                      Jan. 4th, 2021
+                  </div>
+                </div>
+                <div class = "entry">
+                  <div class = "entry-text">
+                    Yingxue Yu has won an award for her poster presentation on the
+                    combustion of biodegradable plastic mulch!
+                  </div>
+                  <div class = "date">
+                      Jan. 4th, 2021
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id = "external-resources">
+              <div id = "external-resource-header">
+                <div id = "external-resource-header-text">
+                  External Resources
+                </div>
+              </div>
+              <div id = "external-resource-links">
+                <li><a href="https://duckduckgo.com/?t=ffab&q=wsu+crop+and+soil+science&ia=web"
+                  target="_blank">WSU Department of Crop and Soil Science</a></li>
+                <li><a href="https://acsess.onlinelibrary.wiley.com/journal/15391663" target="_blank">Vadose Zone Journal</a></li>
+                <li><a href="https://www.agu.org/" target="_blank">American Geoscience Union</a></li>
+                <li><a href="https://www.asabe.org/" target="_blank">American Society of Agricultural and Biological Engineers</a></li>
+              </div>
+        </div>
+
+      </div>
     </div>
-
-
     <div id = "footer">
-
+      <a href="mailto: flury@wsu.edu">Contact</a> <br>
+      <a href="https://css.wsu.edu/people/faculty/markus-flury/" target="_blank"><img src="assets/wsu.png" id="wsu-icon"></a>
     </div>
   </div>
 
