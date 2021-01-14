@@ -1,41 +1,131 @@
 .slideshow {
   width: 100%;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0px;
+  margin-right: 0px;
   overflow: hidden;
   text-align: center;
-  position:relative;
+  position: relative;
   top: 3px;
 }
 
 .slideshow-grid {
   display: grid;
-  grid-template-columns: 100% 100% 100% 100% 100% 100%;
+  grid-template-columns: 100% 100% 100% 100% 100% 100% 100% 100% 100% 100% 100% 100%;
   grid-gap: 0px;
+  margin: 0px;
+  width: 100%;
+  position: relative;
 
 }
 
-/* .image-container > * {
-  animation: 15s autoplay infinite ease-in-out;
-} */
 
-@keyframes autoplay {
-  0% {left: 100%} /*Where the first picture starts*/
-  4% {left: 0%}
-  16.67% {left: 0%}
-  20.67% {left: -100%}
-  33.33% {left: -100%}
-  37.33% {left: -200%}
-  50% {left:-200%}
-  54% {left: -300%}
-  66.67% {left:-300%}
-  70.67% {left: -400%}
-  83.33% {left: -400%}
-  87.33% {left: -500%}
-  100% {left: -500%}
+/*Animation starting at photo 1 */
+@keyframes autoplay1 {
+  0% {left: 0%} /*Where the first picture starts*/
+  12.67% {left: 0%}
+  16.67% {left: -100%}
+  29.33% {left: -100%}
+  33.33% {left: -200%}
+  46% {left:-200%}
+  50% {left: -300%}
+  62.67% {left:-300%}
+  66.67% {left: -400%}
+  79.33% {left: -400%}
+  83.33% {left: -500%}
+  96% {left: -500%}
+  100% {left: -600%}
+}
 
 
+/*Animation starting at photo 2 */
+@keyframes autoplay2 {
+  0% {left: -100%} /*Where the first picture starts*/
+  12.67% {left: -100%}
+  16.67% {left: -200%}
+  29.33% {left: -200%}
+  33.33% {left: -300%}
+  46% {left:-300%}
+  50% {left: -400%}
+  62.67% {left:-400%}
+  66.67% {left: -500%}
+  79.33% {left: -500%}
+  83.33% {left: -600%}
+  96% {left: -600%}
+  100% {left: -700%}
+}
+
+/*Animation starting at photo 3 */
+@keyframes autoplay3 {
+  0% {left: -200%} /*Where the first picture starts*/
+  12.67% {left: -200%}
+  16.67% {left: -300%}
+  29.33% {left: -300%}
+  33.33% {left: -400%}
+  46% {left:-400%}
+  50% {left: -500%}
+  62.67% {left:-500%}
+  66.67% {left: -600%}
+  79.33% {left: -600%}
+  83.33% {left: -700%}
+  96% {left: -700%}
+  100% {left: -800%}
+}
+
+/*Animation starting at photo 4 */
+@keyframes autoplay4 {
+  0% {left: -300%} /*Where the first picture starts*/
+  12.67% {left: -300%}
+  16.67% {left: -400%}
+  29.33% {left: -400%}
+  33.33% {left: -500%}
+  46% {left:-500%}
+  50% {left: -600%}
+  62.67% {left:-600%}
+  66.67% {left: -700%}
+  79.33% {left: -700%}
+  83.33% {left: -800%}
+  96% {left: -800%}
+  100% {left: -900%}
+}
+
+/*Animation starting at photo 5 */
+@keyframes autoplay5 {
+  0% {left: -400%} /*Where the first picture starts*/
+  12.67% {left: -400%}
+  16.67% {left: -500%}
+  29.33% {left: -500%}
+  33.33% {left: -600%}
+  46% {left:-600%}
+  50% {left: -700%}
+  62.67% {left:-700%}
+  66.67% {left: -800%}
+  79.33% {left: -800%}
+  83.33% {left: -900%}
+  96% {left: -900%}
+  100% {left: -1000%}
+}
+
+/*Animation starting at photo 6 */
+@keyframes autoplay6 {
+  0% {left: -500%} /*Where the first picture starts*/
+  12.67% {left: -500%}
+  16.67% {left: -600%}
+  29.33% {left: -600%}
+  33.33% {left: -700%}
+  46% {left:-700%}
+  50% {left: -800%}
+  62.67% {left:-800%}
+  66.67% {left: -900%}
+  79.33% {left: -900%}
+  83.33% {left: -1000%}
+  96% {left: -1000%}
+  100% {left: -1100%}
+}
+
+@keyframes slide-by-1 {
+  0% {left: -100%}
+  100% {left: 0%}
 }
 
 
@@ -47,7 +137,7 @@
   -webkit-transition: left 2s;
   -moz-transition: left 2s;
   -o-transition: left 2s;
-  animation: 18s autoplay infinite ease-in-out;
+  animation: 24s autoplay1 infinite ease-in-out;
 }
 
 
@@ -56,14 +146,13 @@
   padding: 0;
   height: auto;
   width:100%;
-  /* animation-name: slidein; */
 }
 
 .button-container {
   top: -30px;
   position: relative;
   z-index: 99999999;
-
+  display: inline-block;
 
 }
 .slider-button {
@@ -75,30 +164,12 @@
   border-style: solid;
   border-color: #c1c1c1;
   border-width: 2.6;
+  cursor: pointer;
+  margin: 8px;
+  transition: all ease-in-out .2s;
 }
 
-
-
-#slide-1:target ~ .image-container {
-  left: 0;
-}
-
-#slide-2:target ~ .image-container {
-  left: -100%;
-}
-
-#slide-3:target ~ .image-container {
-  left: -200%;
-}
-
-#slide-4:target ~ .image-container {
-  left: -300%;
-}
-
-#slide-5:target ~ .image-container {
-  left: -400%;
-}
-
-#slide-6:target ~ .image-container {
-  left: -500%;
+.slider-button:hover {
+  border-color: white;
+  opacity: .85;
 }
