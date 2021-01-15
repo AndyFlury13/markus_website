@@ -41,8 +41,7 @@ body {
 }
 
 #menu {
-  width:50%;
-  height: fit-content;
+  width:640px;
   height: 50;
   position: fixed;
   top:0px;
@@ -50,14 +49,100 @@ body {
   text-align: right;
   margin-right: 10px;
   padding-top: 26px;
-  z-index: 2;
+  z-index: 120;
 }
 
-.title-link {
+#title-link {
   padding: 0px;
-  z-index:99999999;
+  z-index:120;
   margin: 0px;
-  width: 30%;
+  width: 300px;
+  position: fixed;
+}
+
+
+@media screen and (max-width: 960px) {
+
+  #publications {
+    animation-name: publication-slide;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    position: relative;
+    left: 130px;
+    opacity: 0;
+  }
+
+  #research {
+    animation-name: research-slide;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    position: relative;
+    left: 295px;
+    opacity: 0;
+  }
+
+  #group {
+    animation-name: group-slide;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    position: relative;
+    left: 432px;
+    opacity: 0;
+  }
+
+  #teaching {
+    animation-name: teaching-ani;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+  }
+
+  @keyframes publication-slide {
+    0% {
+      left: 0px;
+      opacity: 1
+    }
+    100% {
+      left: 130px;
+      opacity: 0;
+    }
+  }
+
+  @keyframes research-slide {
+    0% {
+      left: 0px;
+      opacity: 1
+    }
+    100% {
+      left: 295px;
+      opacity: 0;
+    }
+  }
+
+  @keyframes group-slide {
+    0% {
+      left: 0px;
+      opacity: 1;
+    }
+    100% {
+      left: 432px;
+      opacity: 0;
+    }
+  }
+
+  @keyframes teaching-ani {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
 }
 
 
