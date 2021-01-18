@@ -6,7 +6,7 @@ a {
   transition: all ease-in-out .5s;
   color: white;
   margin: 10px;
-  z-index:9999999;
+  z-index: 0;
 }
 
 a:hover {
@@ -37,114 +37,223 @@ body {
   opacity: 1;
   padding: 14px;
   font-size: 26px;
-  z-index: 3;
+  z-index: 10;
 }
 
 #menu {
   width:640px;
   height: 50;
   position: fixed;
-  top:0px;
-  right:0px;
+  top: 5px;
+  right: 0px;
   text-align: right;
   margin-right: 10px;
   padding-top: 26px;
-  z-index: 120;
+  z-index: 10;
 }
 
-#title-link {
+
+#group {
+  position: relative;
+  z-index: 11;
+}
+
+#research {
+  position: relative;
+  z-index: 11;
+}
+
+#publications {
+  position: relative;
+  z-index: 11;
+}
+
+#teaching {
+  position: relative;
+  z-index: 11;
+}
+
+#menu-icon {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top:10px;
+  right: 12px;
+  opacity: 0;
+  z-index: 14;
+  display: none;
+  animation-name: none;
+  transform: rotate(0deg);
+}
+
+#menu-icon-div {
+  position: relative;
+  top: -55px;
+  width: 100%;
+  height: 200%;
+  z-index: 10;
+}
+
+.title-link {
   padding: 0px;
-  z-index:120;
+  z-index:12;
   margin: 0px;
-  width: 300px;
+  width: 330px;
   position: fixed;
+  font-size: 29px
+}
+
+#menu-small {
+  position: absolute;
+  width: 220px;
+  top: 69px;
+  right: 0;
+  height: 180px;
+  background-color: rgb(128, 128, 128, 1);
+  display: none;
+}
+
+#menu-small > div {
+  position: relative;
+  width: 100%;
+  text-align: right;
+  margin: 10px;
+  font-size: 26px;
+  right: 50px;
+}
+
+@-webkit-keyframes rotate-menu-c {
+  from {transform : rotate(0deg)}
+  to {transform: rotate(90deg)}
+}
+
+@-webkit-keyframes rotate-menu-cc {
+  from { transform: rotate(90deg)}
+  to {transform: rotate(0deg)}
 }
 
 
-@media screen and (max-width: 960px) {
-
-  #publications {
-    animation-name: publication-slide;
-    animation-duration: 1s;
-    animation-delay: 0s;
-    animation-timing-function: ease-in-out;
-    position: relative;
+@keyframes publication-slide-r {
+  0% {
+    left: 0px;
+    opacity: 1;
+    display: inline;
+  }
+  100% {
     left: 130px;
     opacity: 0;
+    display: none;
   }
-
-  #research {
-    animation-name: research-slide;
-    animation-duration: 1s;
-    animation-delay: 0s;
-    animation-timing-function: ease-in-out;
-    position: relative;
-    left: 295px;
-    opacity: 0;
-  }
-
-  #group {
-    animation-name: group-slide;
-    animation-duration: 1s;
-    animation-delay: 0s;
-    animation-timing-function: ease-in-out;
-    position: relative;
-    left: 432px;
-    opacity: 0;
-  }
-
-  #teaching {
-    animation-name: teaching-ani;
-    animation-duration: 1s;
-    animation-delay: 0s;
-    animation-timing-function: ease-in-out;
-    opacity: 0;
-  }
-
-  @keyframes publication-slide {
-    0% {
-      left: 0px;
-      opacity: 1
-    }
-    100% {
-      left: 130px;
-      opacity: 0;
-    }
-  }
-
-  @keyframes research-slide {
-    0% {
-      left: 0px;
-      opacity: 1
-    }
-    100% {
-      left: 295px;
-      opacity: 0;
-    }
-  }
-
-  @keyframes group-slide {
-    0% {
-      left: 0px;
-      opacity: 1;
-    }
-    100% {
-      left: 432px;
-      opacity: 0;
-    }
-  }
-
-  @keyframes teaching-ani {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
 }
 
+@keyframes publication-slide-l {
+  0% {
+    left: 130px;
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    left: 0px;
+    opacity: 1;
+    display: inline;
+  }
+}
+
+
+@keyframes research-slide-r {
+  0% {
+    left: 0px;
+    opacity: 1;
+    display: inline;
+  }
+  100% {
+    left: 295px;
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes research-slide-l {
+  0% {
+    left: 295px;
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    left: 0px;
+    opacity: 1;
+    display: inline;
+  }
+}
+
+@keyframes group-slide-r {
+  0% {
+    left: 0px;
+    opacity: 1;
+    display: inline;
+  }
+  100% {
+    left: 432px;
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes group-slide-l {
+  0% {
+    left: 432px;
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    left: 0px;
+    opacity: 1;
+    display: inline;
+  }
+}
+
+@keyframes teaching-fade-out {
+  0% {
+    opacity: 1;
+    display: inline;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes teaching-fade-in {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    opacity: 1;
+    display: inline;
+  }
+}
+
+@keyframes menu-fade-in {
+  from {
+    display: none;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    display: inline;
+  }
+}
+
+@keyframes menu-fade-out {
+  from {
+    display: inline;
+    opacity: 1; }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
 
 /* Main body */
 
@@ -153,7 +262,7 @@ body {
   top: 93px;
   width:100%;
   height: 80vw;
-  z-index: 0;
+  z-index: 8;
 }
 
 #bottom-half-grid {
@@ -168,24 +277,16 @@ body {
 
 
 #left-column {
-  height: 45vw;
+  height: 74vw;
   display: inline-block;
   position: relative;
 }
 
 #column-image {
-  height: 100%;
+  height: 74%;
   width: 100%;
   position: relative;
   z-index: 0;
-}
-
-#welcome-background {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  background: black;
-  opacity: .8;
 }
 
 #welcome-text {
@@ -193,9 +294,10 @@ body {
   position: absolute;
   top: 0px;
   bottom: 0px;
+  height: 63.2%;
   background-color: rgba(0, 0, 0, .6);
   font-size: 1.55vw;
-  z-index: 1;
+  z-index: 0;
   padding: 4vw;
   text-align: left;
   line-height: 2.6vw;
@@ -209,16 +311,17 @@ body {
   white-space: nowrap;
   text-overflow: ellipsis;
   font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-  font-weight: 100;"
+  font-weight: 100;
 }
 
 #podcast {
-  height: 18.7vw;
+  height: 30%;
   width: 100%;
+  overflow: hidden;
 }
 
 #right-column {
-  height: 60vw;
+  height: 74vw;
   /* margin: 10px; */
   width: 101%;
   display: inline-block;
@@ -238,7 +341,7 @@ body {
 }
 
 #lab-header {
-  z-index: 5;
+  z-index: 6;
   position: absolute;
   background-color: inherit;
   height: 89px;
@@ -250,9 +353,9 @@ body {
 
 #lab-title {
   position: absolute;
-  top: 23%;
+  top: 33%;
   left: 20px;
-  font-size: 50px;
+  font-size: 3.0vw;
 }
 
 
@@ -292,7 +395,8 @@ body {
   width: 200px;
   top:10;
   position: absolute;
-  font-size: 20px;
+  font-size: 1.1vw;
+  margin-right: 7%;
 }
 
 
@@ -310,14 +414,14 @@ body {
   position: absolute;
   top: 20px;
   left: 30px;
-
+  font-size: 3vw;
 }
 
 
 #external-resource-links {
-  font-size: 25px;
+  font-size: 1.5vw;
   position: absolute;
-  top: 100px;
+  top: 70px;
   left: 50px;
 }
 /* Footer stuff */
@@ -335,7 +439,7 @@ body {
   bottom: 0;
   font-size: 30px;
   margin-top: 11px;
-  top: 40px;
+  top:-1px;
 }
 
 #wsu-icon {

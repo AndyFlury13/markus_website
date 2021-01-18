@@ -151,7 +151,7 @@
 .button-container {
   top: -30px;
   position: relative;
-  z-index: 99999999;
+  z-index: 9;
   display: inline-block;
 
 }

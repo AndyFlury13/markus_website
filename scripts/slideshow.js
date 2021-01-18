@@ -21,15 +21,16 @@ $(document).ready(function(){
 
     $(".image-container").css("animation-duration", "1s");
     $(".image-container").css("animation-name", "slide-left");
-    $(".image-container").css("transition-timing-function", "ease-in-out");
+    $(".image-container").css("animation-timing-function", "ease-in-out");
     $(".image-container").css("animation-iteration-count", "1");
     $(".image-container").css("left", target_percent);
 
     setTimeout(function() {
-        var animation = "24s autoplay" + id + " infinite ease-in-out";
-        $(".image-container").css("animation", animation);
+      var animation = "24s autoplay" + id + " infinite ease-in-out";
+      $(".image-container").css("animation", animation);
       }, 2000
     );
 
   });
+
 });
